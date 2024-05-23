@@ -1,0 +1,70 @@
+### Classes
+- ro_ont:Entity_processing
+- ro_ont:Entity_locrelator
+- ro_ont:Entity_image
+- ro_ont:value
+- ro_ont:description
+- ro_ont:thesaurus_term
+- ro_ont:entity
+- ro_ont:Entity_marginalia
+- ro_ont:thesaurus
+- ro_ont:Entity_text
+- ro_ont:Entity_objectbio
+- ro_ont:Entity_origin
+- ro_ont:Entity_heraldic
+- ro_ont:Entity_item
+- ro_ont:Entity_person
+- ro_ont:Entity_room
+- ro_ont:Entity_object
+- ro_ont:Entity_material
+- ro_ont:Entity_ornament
+- ro_ont:work
+- ro_ont:Entity_action
+- ro_ont:Entity_quality
+- ro_ont:Entity_time
+
+### Properties
+- ro_ont:text_marginalia_child
+- ro_ont:text_object_child
+- ro_ont:text_quality_child
+- ro_ont:code
+- ro_ont:has_description
+- ro_ont:authority_file
+- ro_ont:text_locrelator_child
+- ro_ont:bildthema
+- ro_ont:text_item_child
+- ro_ont:dianr
+- ro_ont:text_person_child
+- ro_ont:has_thesaurus_entry
+- rdfs:Class
+- ro_ont:text_time_child
+- ro_ont:index
+- ro_ont:text_image_child
+- ro_ont:text_material_child
+- ro_ont:text_processing_child
+- ro_ont:text_ornament_child
+- ro_ont:archivnr
+- ro_ont:text_room_child
+- ro_ont:text_objectbio_child
+- ro_ont:thesaurus_entry
+- ro_ont:prov
+- ro_ont:has_id
+- ro_ont:text_action_child
+- ro_ont:text
+- ro_ont:text_heraldic_child
+- ro_ont:forename
+- ro_ont:contains_entity
+- ro_ont:surname
+- ro_ont:text_origin_child
+- ro_ont:standard_nhg
+- ro_ont:normalisation
+
+### Prefixes
+- `description`: <http://hohensalzburg.imareal.sbg.ac.at/rdf/v1/description/>
+- `entity`: <http://hohensalzburg.imareal.sbg.ac.at/rdf/v1/entity/>
+- `ontology`: <http://hohensalzburg.imareal.sbg.ac.at/rdf/v1/ontology/>
+- `relation`: <http://hohensalzburg.imareal.sbg.ac.at/rdf/v1/relation/>
+- `ro_ont`: <http://hohensalzburg.imareal.sbg.ac.at/rdf/v1>
+- `skos`: <http://www.w3.org/2004/02/skos/core#>
+- `thesaurus`: <http://hohensalzburg.imareal.sbg.ac.at/rdf/v1/thesaurus/>
+- `work`: <http://hohensalzburg.imareal.sbg.ac.at/rdf/v1/work/>
