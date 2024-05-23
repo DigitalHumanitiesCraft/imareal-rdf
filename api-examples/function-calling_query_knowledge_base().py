@@ -9,7 +9,8 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 def query_knowledge_base(question: str) -> str:
     """Queries the RDF knowledge base and returns an answer."""
     g = Graph()
-    g.parse("knowledge_base.ttl", format="ttl")
+    file_path = os.path.join(os.path.dirname(__file__), "knowledge_base.ttl")
+    g.parse(file_path, format="ttl")
 
     depictions = []
     for subject, predicate, obj in g:

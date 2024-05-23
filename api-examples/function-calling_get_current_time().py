@@ -48,7 +48,7 @@ def main():
 
             if function_name == "get_current_time":
                 current_time = get_current_time()
-                print("AI: The current time is", current_time)
+                print("AI: I am using function calling to tell you that the current time is", current_time)
         else:
             print("AI:", response_message["content"])
 
