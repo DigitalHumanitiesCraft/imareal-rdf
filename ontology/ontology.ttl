@@ -1,0 +1,766 @@
+@prefix description: <http://realonline.imareal.sbg.ac.at/rdf/v1/description/> .
+@prefix entity: <http://realonline.imareal.sbg.ac.at/rdf/v1/description/entity/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix realonline: <http://realonline.imareal.sbg.ac.at/rdf/v1/> .
+@prefix relation: <http://realonline.imareal.sbg.ac.at/rdf/v1/ontology/relation/> .
+@prefix ro_ont: <http://realonline.imareal.sbg.ac.at/rdf/v1/ontology/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix thesaurus: <http://realonline.imareal.sbg.ac.at/rdf/v1/thesaurus/> .
+@prefix work: <http://realonline.imareal.sbg.ac.at/rdf/v1/work/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cidoc: <http://www.cidoc-crm.org/cidoc-crm/> .
+
+ro_ont:Entity_handlung a rdfs:Class ;
+    rdfs:subClassOf cidoc:E7_Activity ;
+    rdfs:label "Action or Activity" .
+
+ro_ont:Entity_historort a rdfs:Class ;
+    rdfs:subClassOf cidoc:E4_Period ;
+    rdfs:label "Historical Location" .
+
+ro_ont:Entity_kleidung a rdfs:Class ;
+    rdfs:subClassOf cidoc:E22_Man-Made_Object ;
+    rdfs:label "Type of Clothing" .
+
+ro_ont:Entity_koerperteil a rdfs:Class ;
+    rdfs:subClassOf cidoc:E20_Biological_Object ;
+    rdfs:label "Part of the Body" .
+
+ro_ont:Entity_originalzitat a rdfs:Class ;
+    rdfs:subClassOf cidoc:E33_Linguistic_Object ;
+    rdfs:label "Original Quote" .
+
+ro_ont:Entity_ort a rdfs:Class ;
+    rdfs:subClassOf cidoc:E53_Place ;
+    rdfs:label "Place" .
+
+ro_ont:Entity_person a rdfs:Class ;
+    rdfs:subClassOf cidoc:E21_Person ;
+    rdfs:label "Person" .
+
+ro_ont:Entity_szene a rdfs:Class ;
+    rdfs:subClassOf cidoc:E7_Activity ;
+    rdfs:label "Scene" .
+
+ro_ont:description a rdfs:Class ;
+    rdfs:subClassOf cidoc:E73_Information_Object ;
+    rdfs:label "Description" .
+
+ro_ont:Entity a rdfs:Class ;
+    rdfs:subClassOf cidoc:E1_CRM_Entity ;
+    rdfs:label "Entity" .
+
+ro_ont:thesaurus a rdfs:Class ;
+    rdfs:subClassOf cidoc:E32_Authority_Document ;
+    rdfs:label "Thesaurus" .
+
+ro_ont:thesaurus_term a rdfs:Class ;
+    rdfs:subClassOf cidoc:E55_Type ;
+    rdfs:label "Term in the Thesaurus" .
+
+ro_ont:value a rdfs:Class ;
+    rdfs:subClassOf cidoc:E59_Primitive_Value ;
+    rdfs:label "Value" .
+
+ro_ont:work a rdfs:Class ;
+    rdfs:subClassOf cidoc:E84_Information_Carrier ;
+    rdfs:label "Work" .
+
+ro_ont:thesaurus_entry a rdfs:Class ;
+    rdfs:subClassOf cidoc:E32_Authority_Document ;
+    rdfs:label "Entry in the Thesaurus" .
+
+ro_ont:Entity_text a rdfs:Class ;
+    rdfs:subClassOf cidoc:E33_Linguistic_Object ;
+    rdfs:label "Text Entity" .
+
+ro_ont:Entity_marginalia a rdfs:Class ;
+    rdfs:subClassOf cidoc:E33_Linguistic_Object ;
+    rdfs:label "Marginalia Entity" .
+
+ro_ont:Entity_object a rdfs:Class ;
+    rdfs:subClassOf cidoc:E19_Physical_Object ;
+    rdfs:label "Object Entity" .
+
+ro_ont:Entity_quality a rdfs:Class ;
+    rdfs:subClassOf cidoc:E55_Type ;
+    rdfs:label "Quality Entity" .
+
+ro_ont:Entity_locrelator a rdfs:Class ;
+    rdfs:subClassOf cidoc:E39_Actor ;
+    rdfs:label "Locrelator Entity" .
+
+ro_ont:Entity_item a rdfs:Class ;
+    rdfs:subClassOf cidoc:E19_Physical_Object ;
+    rdfs:label "Item Entity" .
+
+ro_ont:Entity_time a rdfs:Class ;
+    rdfs:subClassOf cidoc:E52_Time-Span ;
+    rdfs:label "Time Entity" .
+
+ro_ont:Entity_image a rdfs:Class ;
+    rdfs:subClassOf cidoc:E38_Image ;
+    rdfs:label "Image Entity" .
+
+ro_ont:Entity_material a rdfs:Class ;
+    rdfs:subClassOf cidoc:E57_Material ;
+    rdfs:label "Material Entity" .
+
+ro_ont:Entity_processing a rdfs:Class ;
+    rdfs:subClassOf cidoc:E12_Production ;
+    rdfs:label "Processing Entity" .
+
+ro_ont:Entity_ornament a rdfs:Class ;
+    rdfs:subClassOf cidoc:E22_Man-Made_Object ;
+    rdfs:label "Ornament Entity" .
+
+ro_ont:Entity_room a rdfs:Class ;
+    rdfs:subClassOf cidoc:E53_Place ;
+    rdfs:label "Room Entity" .
+
+ro_ont:Entity_objectbio a rdfs:Class ;
+    rdfs:subClassOf cidoc:E10_Transfer_of_Custody ;
+    rdfs:label "Object Biography Entity" .
+
+ro_ont:Entity_action a rdfs:Class ;
+    rdfs:subClassOf cidoc:E7_Activity ;
+    rdfs:label "Action Entity" .
+
+ro_ont:Entity_heraldic a rdfs:Class ;
+    rdfs:subClassOf cidoc:E33_Linguistic_Object ;
+    rdfs:label "Heraldic Entity" .
+
+ro_ont:Entity_origin a rdfs:Class ;
+    rdfs:subClassOf cidoc:E12_Production ;
+    rdfs:label "Origin Entity" .
+
+ro_ont:bildthema a rdf:Property ;
+    rdfs:domain ro_ont:work ;
+    rdfs:range xsd:string ;
+    rdfs:label "Image Theme" ;
+    rdfs:comment "Image theme associated with a work." .
+
+ro_ont:comments a rdf:Property ;
+    rdfs:domain ro_ont:value ;
+    rdfs:range rdf:List ;
+    rdfs:label "Comments" ;
+    rdfs:comment "Comments associated with a value." .
+
+ro_ont:ensemblenr a rdf:Property ;
+    rdfs:domain ro_ont:work ;
+    rdfs:range xsd:string ;
+    rdfs:label "Ensemble Number" ;
+    rdfs:comment "Ensemble number associated with a work." .
+
+ro_ont:has_description a rdf:Property ;
+    rdfs:domain ro_ont:work ;
+    rdfs:range ro_ont:description ;
+    rdfs:label "Has Description" ;
+    rdfs:comment "Has a description for a work." .
+
+ro_ont:has_thesaurus_entry a rdf:Property ;
+    rdfs:domain ro_ont:value ;
+    rdfs:range ro_ont:thesaurus_entry ;
+    rdfs:label "Has Thesaurus Entry" ;
+    rdfs:comment "Has an entry in the thesaurus for a value." .
+
+ro_ont:index a rdf:Property ;
+    rdfs:domain ro_ont:work ;
+    rdfs:range xsd:positiveInteger ;
+    rdfs:label "Index" ;
+    rdfs:comment "Index associated with a work." .
+
+ro_ont:raumordnung_id a rdf:Property ;
+    rdfs:domain ro_ont:work ;
+    rdfs:range xsd:string ;
+    rdfs:label "Raumordnung ID" ;
+    rdfs:comment "Raumordnung ID associated with a work." .
+
+relation:abschnitt_objekt_bezug a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Section Object Reference" ;
+    rdfs:comment "Relationship: section object reference for an entity." .
+
+relation:abschnitt_person_bezug a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Section Person Reference" ;
+    rdfs:comment "Relationship: section person reference for an entity." .
+
+relation:abschnitt_raum_bezug a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Section Space Reference" ;
+    rdfs:comment "Relationship: section space reference for an entity." .
+
+relation:inventar_abschnitt_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Inventory Section Child" ;
+    rdfs:comment "Relationship: inventory section child for an entity." .
+
+relation:inventar_person_bezug a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Inventory Person Reference" ;
+    rdfs:comment "Relationship: inventory person reference for an entity." .
+
+relation:inventar_raum_bezug a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Inventory Space Reference" ;
+    rdfs:comment "Relationship: inventory space reference for an entity." .
+
+relation:objekt_mass_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Object Mass Child" ;
+    rdfs:comment "Relationship: object mass child for an entity." .
+
+relation:objekt_objektbewertung_contains a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Object Evaluation Contains" ;
+    rdfs:comment "Relationship: object evaluation contains an entity." .
+
+relation:objekt_objekteigenschaft_contains a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Object Property Contains" ;
+    rdfs:comment "Relationship: object property contains an entity." .
+
+relation:objekt_objektfarbe_contains a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Object Color Contains" ;
+    rdfs:comment "Relationship: object color contains an entity." .
+
+relation:objekt_objektformelement_contains a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Object Form Element Contains" ;
+    rdfs:comment "Relationship: object form element contains an entity." .
+
+relation:objekt_objektherstellungstechnik_contains a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Object Manufacturing Technique Contains" ;
+    rdfs:comment "Relationship: object manufacturing technique contains an entity." .
+
+relation:objekt_objektmaterial_contains a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Object Material Contains" ;
+    rdfs:comment "Relationship: object material contains an entity." .
+
+relation:objekt_objektmenge_contains a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Object Quantity Contains" ;
+    rdfs:comment "Relationship: object quantity contains an entity." .
+
+relation:objekt_objektsonstiges_contains a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Object Miscellaneous Contains" ;
+    rdfs:comment "Relationship: object miscellaneous contains an entity." .
+
+relation:ort_raum_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Place to Space Child" ;
+    rdfs:comment "Relationship: place to space child for an entity." .
+
+relation:raum_objekt_bezug a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Space to Object Reference" ;
+    rdfs:comment "Relationship: space to object reference for an entity." .
+
+relation:raum_raum_bezug a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Space to Space Reference" ;
+    rdfs:comment "Relationship: space to space reference for an entity." .
+
+relation:raum_raumbewertung_contains a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Space Evaluation Contains" ;
+    rdfs:comment "Relationship: space evaluation contains an entity." .
+
+relation:raum_raumeigenschaft_contains a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Space Property Contains" ;
+    rdfs:comment "Relationship: space property contains an entity." .
+
+relation:raum_raumfarbe_contains a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Space Color Contains" ;
+    rdfs:comment "Relationship: space color contains an entity." .
+
+relation:raum_raumformelement_contains a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Space Form Element Contains" ;
+    rdfs:comment "Relationship: space form element contains an entity." .
+
+relation:raum_raumherstellungstechnik_contains a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Space Manufacturing Technique Contains" ;
+    rdfs:comment "Relationship: space manufacturing technique contains an entity." .
+
+relation:raum_raummaterial_contains a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Space Material Contains" ;
+    rdfs:comment "Relationship: space material contains an entity." .
+
+relation:raum_raummenge_contains a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Space Quantity Contains" ;
+    rdfs:comment "Relationship: space quantity contains an entity." .
+
+relation:raum_raumsonstiges_contains a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Space Miscellaneous Contains" ;
+    rdfs:comment "Relationship: space miscellaneous contains an entity." .
+
+ro_ont:workreference a rdf:Property ;
+    rdfs:domain ro_ont:work ;
+    rdfs:range xsd:string ;
+    rdfs:label "Work Reference" ;
+    rdfs:comment "Work reference for a work." .
+
+ro_ont:text_marginalia_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_text ;
+    rdfs:range ro_ont:Entity_marginalia ;
+    rdfs:label "Text Marginalia Child" ;
+    rdfs:comment "Child marginalia entity related to text." .
+
+ro_ont:text_object_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_text ;
+    rdfs:range ro_ont:Entity_object ;
+    rdfs:label "Text Object Child" ;
+    rdfs:comment "Child object entity related to text." .
+
+    ro_ont:text_quality_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_text ;
+    rdfs:range ro_ont:Entity_quality ;
+    rdfs:label "Text Quality Child" ;
+    rdfs:comment "Child quality entity related to text." .
+
+ro_ont:code a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Code" ;
+    rdfs:comment "Code associated with an entity." .
+
+ro_ont:authority_file a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Authority File" ;
+    rdfs:comment "Authority file for an entity." .
+
+ro_ont:text_locrelator_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_text ;
+    rdfs:range ro_ont:Entity_locrelator ;
+    rdfs:label "Text Locrelator Child" ;
+    rdfs:comment "Child locrelator entity related to text." .
+
+ro_ont:text_item_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_text ;
+    rdfs:range ro_ont:Entity_item ;
+    rdfs:label "Text Item Child" ;
+    rdfs:comment "Child item entity related to text." .
+
+ro_ont:dianr a rdf:Property ;
+    rdfs:domain ro_ont:work ;
+    rdfs:range xsd:string ;
+    rdfs:label "DIA Number" ;
+    rdfs:comment "DIA number associated with a work." .
+
+ro_ont:text_person_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_text ;
+    rdfs:range ro_ont:Entity_person ;
+    rdfs:label "Text Person Child" ;
+    rdfs:comment "Child person entity related to text." .
+
+ro_ont:text_time_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_text ;
+    rdfs:range ro_ont:Entity_time ;
+    rdfs:label "Text Time Child" ;
+    rdfs:comment "Child time entity related to text." .
+
+ro_ont:text_image_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_text ;
+    rdfs:range ro_ont:Entity_image ;
+    rdfs:label "Text Image Child" ;
+    rdfs:comment "Child image entity related to text." .
+
+ro_ont:text_material_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_text ;
+    rdfs:range ro_ont:Entity_material ;
+    rdfs:label "Text Material Child" ;
+    rdfs:comment "Child material entity related to text." .
+
+ro_ont:text_processing_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_text ;
+    rdfs:range ro_ont:Entity_processing ;
+    rdfs:label "Text Processing Child" ;
+    rdfs:comment "Child processing entity related to text." .
+
+ro_ont:text_ornament_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_text ;
+    rdfs:range ro_ont:Entity_ornament ;
+    rdfs:label "Text Ornament Child" ;
+    rdfs:comment "Child ornament entity related to text." .
+
+ro_ont:archivnr a rdf:Property ;
+    rdfs:domain ro_ont:work ;
+    rdfs:range xsd:string ;
+    rdfs:label "Archive Number" ;
+    rdfs:comment "Archive number associated with a work." .
+
+ro_ont:text_room_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_text ;
+    rdfs:range ro_ont:Entity_room ;
+    rdfs:label "Text Room Child" ;
+    rdfs:comment "Child room entity related to text." .
+
+ro_ont:text_objectbio_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_text ;
+    rdfs:range ro_ont:Entity_objectbio ;
+    rdfs:label "Text Object Bio Child" ;
+    rdfs:comment "Child object bio entity related to text." .
+
+ro_ont:thesaurus_entry a rdf:Property ;
+    rdfs:domain ro_ont:thesaurus ;
+    rdfs:range ro_ont:thesaurus_term ;
+    rdfs:label "Thesaurus Entry" ;
+    rdfs:comment "Entry in the thesaurus." .
+
+ro_ont:prov a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Provenance" ;
+    rdfs:comment "Provenance associated with an entity." .
+
+ro_ont:has_id a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Has ID" ;
+    rdfs:comment "ID associated with an entity." .
+
+ro_ont:text_action_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_text ;
+    rdfs:range ro_ont:Entity_action ;
+    rdfs:label "Text Action Child" ;
+    rdfs:comment "Child action entity related to text." .
+
+ro_ont:text a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Text" ;
+    rdfs:comment "Text associated with an entity." .
+
+ro_ont:text_heraldic_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_text ;
+    rdfs:range ro_ont:Entity_heraldic ;
+    rdfs:label "Text Heraldic Child" ;
+    rdfs:comment "Child heraldic entity related to text." .
+
+ro_ont:forename a rdf:Property ;
+    rdfs:domain ro_ont:Entity_person ;
+    rdfs:range xsd:string ;
+    rdfs:label "Forename" ;
+    rdfs:comment "Forename of a person." .
+
+ro_ont:contains_entity a rdf:Property ;
+    rdfs:domain ro_ont:description ;
+    rdfs:range ro_ont:Entity ;
+    rdfs:label "Contains Entity" ;
+    rdfs:comment "Contains entity within a description." .
+
+ro_ont:surname a rdf:Property ;
+    rdfs:domain ro_ont:Entity_person ;
+    rdfs:range xsd:string ;
+    rdfs:label "Surname" ;
+    rdfs:comment "Surname of a person." .
+
+ro_ont:text_origin_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_text ;
+    rdfs:range ro_ont:Entity_origin ;
+    rdfs:label "Text Origin Child" ;
+    rdfs:comment "Child origin entity related to text." .
+
+ro_ont:standard_nhg a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Standard NHG" ;
+    rdfs:comment "Standard NHG associated with an entity." .
+
+ro_ont:normalisation a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Normalization" ;
+    rdfs:comment "Normalization associated with an entity." .
+
+    ro_ont:bundesland a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Bundesland" ;
+    rdfs:comment "Bundesland associated with an entity." .
+
+ro_ont:datierung a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Datierung" ;
+    rdfs:comment "Dating information associated with an entity." .
+
+ro_ont:ensemble a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Ensemble" ;
+    rdfs:comment "Ensemble information associated with an entity." .
+
+ro_ont:fol a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Folio" ;
+    rdfs:comment "Folio associated with an entity." .
+
+ro_ont:enstehungsort a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Entstehungsort" ;
+    rdfs:comment "Place of origin associated with an entity." .
+
+ro_ont:form a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Form" ;
+    rdfs:comment "Form associated with an entity." .
+
+ro_ont:institution a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Institution" ;
+    rdfs:comment "Institution associated with an entity." .
+
+ro_ont:invnr a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Inventory Number" ;
+    rdfs:comment "Inventory number associated with an entity." .
+
+ro_ont:literatur a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Literature" ;
+    rdfs:comment "Literature associated with an entity." .
+
+ro_ont:objektart a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Object Type" ;
+    rdfs:comment "Object type associated with an entity." .
+
+ro_ont:post a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Post" ;
+    rdfs:comment "Post information associated with an entity." .
+
+ro_ont:provenienz a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Provenance" ;
+    rdfs:comment "Provenance information associated with an entity." .
+
+ro_ont:quelle a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Source" ;
+    rdfs:comment "Source information associated with an entity." .
+
+ro_ont:staat a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "State" ;
+    rdfs:comment "State information associated with an entity." .
+
+ro_ont:technik a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Technique" ;
+    rdfs:comment "Technique associated with an entity." .
+
+ro_ont:farbe a rdf:Property ;
+    rdfs:domain ro_ont:Entity ;
+    rdfs:range xsd:string ;
+    rdfs:label "Color" ;
+    rdfs:comment "Color associated with an entity." .
+
+ro_ont:sex a rdf:Property ;
+    rdfs:domain ro_ont:Entity_person ;
+    rdfs:range xsd:string ;
+    rdfs:label "Sex" ;
+    rdfs:comment "Sex of a person." .
+
+relation:handlung_person_bezug a rdf:Property ;
+    rdfs:domain ro_ont:Entity_handlung ;
+    rdfs:range ro_ont:Entity_person ;
+    rdfs:label "Action to Person Reference" ;
+    rdfs:comment "Relationship: action to person reference." .
+
+relation:kleidung_kleidung_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_kleidung ;
+    rdfs:range ro_ont:Entity_kleidung ;
+    rdfs:label "Clothing to Clothing Child" ;
+    rdfs:comment "Relationship: clothing to clothing child." .
+
+relation:kleidung_kleidung_hat_bezug a rdf:Property ;
+    rdfs:domain ro_ont:Entity_kleidung ;
+    rdfs:range ro_ont:Entity_kleidung ;
+    rdfs:label "Clothing to Clothing Reference" ;
+    rdfs:comment "Relationship: clothing to clothing reference." .
+
+relation:kleidung_objekt_bezug a rdf:Property ;
+    rdfs:domain ro_ont:Entity_kleidung ;
+    rdfs:range ro_ont:Entity_objekt ;
+    rdfs:label "Clothing to Object Reference" ;
+    rdfs:comment "Relationship: clothing to object reference." .
+
+relation:kleidung_objekt_hat_bezug a rdf:Property ;
+    rdfs:domain ro_ont:Entity_kleidung ;
+    rdfs:range ro_ont:Entity_objekt ;
+    rdfs:label "Clothing to Object Reference" ;
+    rdfs:comment "Relationship: clothing to object reference." .
+
+relation:kleidung_originalzitat_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_kleidung ;
+    rdfs:range ro_ont:Entity_originalzitat ;
+    rdfs:label "Clothing to Original Quote Child" ;
+    rdfs:comment "Relationship: clothing to original quote child." .
+
+relation:koerperteil_koerperteil_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_koerperteil ;
+    rdfs:range ro_ont:Entity_koerperteil ;
+    rdfs:label "Body Part to Body Part Child" ;
+    rdfs:comment "Relationship: body part to body part child." .
+
+relation:koerperteil_objekt_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_koerperteil ;
+    rdfs:range ro_ont:Entity_objekt ;
+    rdfs:label "Body Part to Object Child" ;
+    rdfs:comment "Relationship: body part to object child." .
+
+relation:koerperteil_originalzitat_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_koerperteil ;
+    rdfs:range ro_ont:Entity_originalzitat ;
+    rdfs:label "Body Part to Original Quote Child" ;
+    rdfs:comment "Relationship: body part to original quote child." .
+
+relation:objekt_objekt_bezug a rdf:Property ;
+    rdfs:domain ro_ont:Entity_objekt ;
+    rdfs:range ro_ont:Entity_objekt ;
+    rdfs:label "Object to Object Reference" ;
+    rdfs:comment "Relationship: object to object reference." .
+
+relation:objekt_objekt_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_objekt ;
+    rdfs:range ro_ont:Entity_objekt ;
+    rdfs:label "Object to Object Child" ;
+    rdfs:comment "Relationship: object to object child." .
+
+relation:objekt_objekt_hat_bezug a rdf:Property ;
+    rdfs:domain ro_ont:Entity_objekt ;
+    rdfs:range ro_ont:Entity_objekt ;
+    rdfs:label "Object to Object Reference" ;
+    rdfs:comment "Relationship: object to object reference." .
+
+relation:objekt_originalzitat_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_objekt ;
+    rdfs:range ro_ont:Entity_originalzitat ;
+    rdfs:label "Object to Original Quote Child" ;
+    rdfs:comment "Relationship: object to original quote child." .
+
+relation:person_kleidung_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_person ;
+    rdfs:range ro_ont:Entity_kleidung ;
+    rdfs:label "Person to Clothing Child" ;
+    rdfs:comment "Relationship: person to clothing child." .
+
+relation:person_koerperteil_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_person ;
+    rdfs:range ro_ont:Entity_koerperteil ;
+    rdfs:label "Person to Body Part Child" ;
+    rdfs:comment "Relationship: person to body part child." .
+
+relation:person_objekt_attribut a rdf:Property ;
+    rdfs:domain ro_ont:Entity_person ;
+    rdfs:range ro_ont:Entity_objekt ;
+    rdfs:label "Person to Object Attribute" ;
+    rdfs:comment "Relationship: person to object attribute." .
+
+relation:person_objekt_bezug a rdf:Property ;
+    rdfs:domain ro_ont:Entity_person ;
+    rdfs:range ro_ont:Entity_objekt ;
+    rdfs:label "Person to Object Reference" ;
+    rdfs:comment "Relationship: person to object reference." .
+
+relation:person_objekt_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_person ;
+    rdfs:range ro_ont:Entity_objekt ;
+    rdfs:label "Person to Object Child" ;
+    rdfs:comment "Relationship: person to object child." .
+
+relation:person_objekt_hat_bezug a rdf:Property ;
+    rdfs:domain ro_ont:Entity_person ;
+    rdfs:range ro_ont:Entity_objekt ;
+    rdfs:label "Person to Object Reference" ;
+    rdfs:comment "Relationship: person to object reference." .
+
+relation:person_person_bezug a rdf:Property ;
+    rdfs:domain ro_ont:Entity_person ;
+    rdfs:range ro_ont:Entity_person ;
+    rdfs:label "Person to Person Reference" ;
+    rdfs:comment "Relationship: person to person reference." .
+
+relation:szene_handlung_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_szene ;
+    rdfs:range ro_ont:Entity_handlung ;
+    rdfs:label "Scene to Action Child" ;
+    rdfs:comment "Relationship: scene to action child." .
+
+relation:szene_historort_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_szene ;
+    rdfs:range ro_ont:Entity_historort ;
+    rdfs:label "Scene to Historical Location Child" ;
+    rdfs:comment "Relationship: scene to historical location child." .
+
+relation:szene_objekt_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_szene ;
+    rdfs:range ro_ont:Entity_objekt ;
+    rdfs:label "Scene to Object Child" ;
+    rdfs:comment "Relationship: scene to object child." .
+
+relation:szene_ort_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_szene ;
+    rdfs:range ro_ont:Entity_ort ;
+    rdfs:label "Scene to Place Child" ;
+    rdfs:comment "Relationship: scene to place child." .
+
+relation:szene_person_child a rdf:Property ;
+    rdfs:domain ro_ont:Entity_szene ;
+    rdfs:range ro_ont:Entity_person ;
+    rdfs:label "Scene to Person Child" ;
+    rdfs:comment "Relationship: scene to person child." .

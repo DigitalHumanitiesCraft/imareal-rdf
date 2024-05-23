@@ -1,0 +1,146 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ro_ont: <http://realonline.imareal.sbg.ac.at/rdf/v1/ontology/> .
+@prefix cidoc: <http://www.cidoc-crm.org/cidoc-crm/> .
+
+# Top Level Classes
+ro_ont:Entity rdfs:subClassOf cidoc:E1_CRM_Entity .
+
+ro_ont:Thesaurus rdfs:subClassOf cidoc:E32_Authority_Document .
+
+ro_ont:Description rdfs:subClassOf cidoc:E73_Information_Object .
+
+ro_ont:Work rdfs:subClassOf cidoc:E71_Man-Made_Thing .
+
+# Entity Hierarchy
+ro_ont:Entity_handlung a rdfs:Class ;
+    rdfs:subClassOf cidoc:E7_Activity ;
+    rdfs:label "Action or Activity" .
+
+ro_ont:Entity_historort a rdfs:Class ;
+    rdfs:subClassOf cidoc:E4_Period ;
+    rdfs:label "Historical Location" .
+
+ro_ont:Entity_kleidung a rdfs:Class ;
+    rdfs:subClassOf cidoc:E22_Man-Made_Object ;
+    rdfs:label "Type of Clothing" .
+
+ro_ont:Entity_koerperteil a rdfs:Class ;
+    rdfs:subClassOf cidoc:E20_Biological_Object ;
+    rdfs:label "Part of the Body" .
+
+ro_ont:Entity_objekt a rdfs:Class ;
+    rdfs:subClassOf cidoc:E19_Physical_Object ;
+    rdfs:label "Object" .
+
+ro_ont:Entity_originalzitat a rdfs:Class ;
+    rdfs:subClassOf cidoc:E33_Linguistic_Object ;
+    rdfs:label "Original Quote" .
+
+ro_ont:Entity_ort a rdfs:Class ;
+    rdfs:subClassOf cidoc:E53_Place ;
+    rdfs:label "Place" .
+
+ro_ont:Entity_person a rdfs:Class ;
+    rdfs:subClassOf cidoc:E21_Person ;
+    rdfs:label "Person" .
+
+ro_ont:Entity_szene a rdfs:Class ;
+    rdfs:subClassOf cidoc:E7_Activity ;
+    rdfs:label "Scene" .
+
+ro_ont:description a rdfs:Class ;
+    rdfs:subClassOf cidoc:E73_Information_Object ;
+    rdfs:label "Description" .
+
+ro_ont:entity a rdfs:Class ;
+    rdfs:subClassOf cidoc:E1_CRM_Entity ;
+    rdfs:label "Entity" .
+
+ro_ont:thesaurus a rdfs:Class ;
+    rdfs:subClassOf cidoc:E32_Authority_Document ;
+    rdfs:label "Thesaurus" .
+
+ro_ont:thesaurus_term a rdfs:Class ;
+    rdfs:subClassOf cidoc:E55_Type ;
+    rdfs:label "Term in the Thesaurus" .
+
+ro_ont:value a rdfs:Class ;
+    rdfs:subClassOf cidoc:E59_Primitive_Value ;
+    rdfs:label "Value" .
+
+ro_ont:work a rdfs:Class ;
+    rdfs:subClassOf cidoc:E84_Information_Carrier ;
+    rdfs:label "Work" .
+
+skos:Concept a rdfs:Class ;
+    rdfs:subClassOf cidoc:E28_Conceptual_Object ;
+    rdfs:label "SKOS Concept" .
+
+ro_ont:thesaurus_entry a rdfs:Class ;
+    rdfs:subClassOf cidoc:E32_Authority_Document ;
+    rdfs:label "Entry in the Thesaurus" .
+
+ro_ont:Entity_text a rdfs:Class ;
+    rdfs:subClassOf cidoc:E33_Linguistic_Object ;
+    rdfs:label "Text Entity" .
+
+ro_ont:Entity_marginalia a rdfs:Class ;
+    rdfs:subClassOf cidoc:E33_Linguistic_Object ;
+    rdfs:label "Marginalia Entity" .
+
+ro_ont:Entity_object a rdfs:Class ;
+    rdfs:subClassOf cidoc:E19_Physical_Object ;
+    rdfs:label "Object Entity" .
+
+ro_ont:Entity_quality a rdfs:Class ;
+    rdfs:subClassOf cidoc:E55_Type ;
+    rdfs:label "Quality Entity" .
+
+ro_ont:Entity_locrelator a rdfs:Class ;
+    rdfs:subClassOf cidoc:E39_Actor ;
+    rdfs:label "Locrelator Entity" .
+
+ro_ont:Entity_item a rdfs:Class ;
+    rdfs:subClassOf cidoc:E19_Physical_Object ;
+    rdfs:label "Item Entity" .
+
+ro_ont:Entity_time a rdfs:Class ;
+    rdfs:subClassOf cidoc:E52_Time-Span ;
+    rdfs:label "Time Entity" .
+
+ro_ont:Entity_image a rdfs:Class ;
+    rdfs:subClassOf cidoc:E38_Image ;
+    rdfs:label "Image Entity" .
+
+ro_ont:Entity_material a rdfs:Class ;
+    rdfs:subClassOf cidoc:E57_Material ;
+    rdfs:label "Material Entity" .
+
+ro_ont:Entity_processing a rdfs:Class ;
+    rdfs:subClassOf cidoc:E12_Production ;
+    rdfs:label "Processing Entity" .
+
+ro_ont:Entity_ornament a rdfs:Class ;
+    rdfs:subClassOf cidoc:E22_Man-Made_Object ;
+    rdfs:label "Ornament Entity" .
+
+ro_ont:Entity_room a rdfs:Class ;
+    rdfs:subClassOf cidoc:E53_Place ;
+    rdfs:label "Room Entity" .
+
+ro_ont:Entity_objectbio a rdfs:Class ;
+    rdfs:subClassOf cidoc:E10_Transfer_of_Custody ;
+    rdfs:label "Object Biography Entity" .
+
+ro_ont:Entity_action a rdfs:Class ;
+    rdfs:subClassOf cidoc:E7_Activity ;
+    rdfs:label "Action Entity" .
+
+ro_ont:Entity_heraldic a rdfs:Class ;
+    rdfs:subClassOf cidoc:E33_Linguistic_Object ;
+    rdfs:label "Heraldic Entity" .
+
+ro_ont:Entity_origin a rdfs:Class ;
+    rdfs:subClassOf cidoc:E12_Production ;
+    rdfs:label "Origin Entity" .

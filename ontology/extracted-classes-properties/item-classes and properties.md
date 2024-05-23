@@ -1,0 +1,168 @@
+Namespaces:
+ * description: <http://realonline.imareal.sbg.ac.at/rdf/v1/description/> .
+ * entity: <http://realonline.imareal.sbg.ac.at/rdf/v1/description/entity/> .
+ * realonline: <http://realonline.imareal.sbg.ac.at/rdf/v1/> .
+ * relation: <http://realonline.imareal.sbg.ac.at/rdf/v1/ontology/relation/> .
+ * ro_ont: <http://realonline.imareal.sbg.ac.at/rdf/v1/ontology/> .
+ * skos: <http://www.w3.org/2004/02/skos/core#> .
+ * thesaurus: <http://realonline.imareal.sbg.ac.at/rdf/v1/thesaurus/> .
+ * work: <http://realonline.imareal.sbg.ac.at/rdf/v1/work/> .
+
+### Classes
+- ro_ont:thesaurus_collection: A collection of controlled vocabulary terms used in the thesaurus.
+- ro_ont:thesaurus_term: An individual term or concept within the thesaurus.
+- skos:Concept: A concept in the SKOS (Simple Knowledge Organization System) vocabulary.
+
+### Properties
+- ontology:archivnr
+  - Domain: `ontology:work`
+  - Range: `xsd:string`
+  - Description: Archive number associated with a work.
+- ontology:bildthema
+  - Domain: `ontology:work`
+  - Range: `xsd:string`
+  - Description: Image theme associated with a work.
+- ontology:comments
+  - Domain: `ontology:value`
+  - Range: `rdf:List`
+  - Description: Comments associated with a value.
+- ontology:contains_entity
+  - Domain: `ontology:description`
+  - Range: `ontology:entity`
+  - Description: Contains entity within a description.
+- ontology:dianr
+  - Domain: `ontology:work`
+  - Range: `xsd:string`
+  - Description: DIA number associated with a work.
+- ontology:ensemblenr
+  - Domain: `ontology:work`
+  - Range: `xsd:string`
+  - Description: Ensemble number associated with a work.
+- ontology:has_description
+  - Domain: `ontology:work`
+  - Range: `ontology:description`
+  - Description: Has a description for a work.
+- ontology:has_thesaurus_entry
+  - Domain: `ontology:value`
+  - Range: `ontology:thesaurus_entry`
+  - Description: Has an entry in the thesaurus for a value.
+- ontology:index
+  - Domain: `ontology:work`
+  - Range: `xsd:positiveInteger`
+  - Description: Index associated with a work.
+- ontology:raumordnung_id
+  - Domain: `ontology:work`
+  - Range: `xsd:string`
+  - Description: Raumordnung ID associated with a work.
+- ontology:relation/abschnitt_objekt_bezug
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: section object reference for an entity.
+- ontology:relation/abschnitt_person_bezug
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: section person reference for an entity.
+- ontology:relation/abschnitt_raum_bezug
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: section space reference for an entity.
+- ontology:relation/inventar_abschnitt_child
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: inventory section child for an entity.
+- ontology:relation/inventar_person_bezug
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: inventory person reference for an entity.
+- ontology:relation/inventar_raum_bezug
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: inventory space reference for an entity.
+- ontology:relation/objekt_mass_child
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: object mass child for an entity.
+- ontology:relation/objekt_objekt_bezug
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: object to object reference for an entity.
+- ontology:relation/objekt_objektbewertung_contains
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: object evaluation contains an entity.
+- ontology:relation/objekt_objekteigenschaft_contains
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: object property contains an entity.
+- ontology:relation/objekt_objektfarbe_contains
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: object color contains an entity.
+- ontology:relation/objekt_objektformelement_contains
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: object form element contains an entity.
+- ontology:relation/objekt_objektherstellungstechnik_contains
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: object manufacturing technique contains an entity.
+- ontology:relation/objekt_objektmaterial_contains
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: object material contains an entity.
+- ontology:relation/objekt_objektmenge_contains
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: object quantity contains an entity.
+- ontology:relation/objekt_objektsonstiges_contains
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: object miscellaneous contains an entity.
+- ontology:relation/ort_raum_child
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: place to space child for an entity.
+- ontology:relation/raum_objekt_bezug
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: space to object reference for an entity.
+- ontology:relation/raum_raum_bezug
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: space to space reference for an entity.
+- ontology:relation/raum_raumbewertung_contains
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: space evaluation contains an entity.
+- ontology:relation/raum_raumeigenschaft_contains
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: space property contains an entity.
+- ontology:relation/raum_raumfarbe_contains
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: space color contains an entity.
+- ontology:relation/raum_raumformelement_contains
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: space form element contains an entity.
+- ontology:relation/raum_raumherstellungstechnik_contains
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: space manufacturing technique contains an entity.
+- ontology:relation/raum_raummaterial_contains
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: space material contains an entity.
+- ontology:relation/raum_raummenge_contains
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: space quantity contains an entity.
+- ontology:relation/raum_raumsonstiges_contains
+  - Domain: `ontology:entity`
+  - Range: `ontology:entity`
+  - Description: Relationship: space miscellaneous contains an entity.
+- ontology:workreference
+  - Domain: `ontology:work`
+  - Range: `xsd:string`
+  - Description: Work reference for a work.

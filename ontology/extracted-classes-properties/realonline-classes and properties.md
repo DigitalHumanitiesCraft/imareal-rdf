@@ -1,0 +1,289 @@
+Namespaces:
+- description: <http://realonline.imareal.sbg.ac.at/rdf/v1/description/> .
+- entity: <http://realonline.imareal.sbg.ac.at/rdf/v1/description/entity/> .
+- realonline: <http://realonline.imareal.sbg.ac.at/rdf/v1/> .
+- relation: <http://realonline.imareal.sbg.ac.at/rdf/v1/ontology/relation/> .
+- ro_ont: <http://realonline.imareal.sbg.ac.at/rdf/v1/ontology/> .
+- skos: <http://www.w3.org/2004/02/skos/core#> .
+- thesaurus: <http://realonline.imareal.sbg.ac.at/rdf/v1/thesaurus/> .
+- work: <http://realonline.imareal.sbg.ac.at/rdf/v1/work/> .
+
+### Classes
+- ro_ont:Entity_handlung: Represents an action or activity.
+- ro_ont:Entity_historort: Represents a historical location.
+- ro_ont:Entity_kleidung: Represents a type of clothing.
+- ro_ont:Entity_koerperteil: Represents a part of the body.
+- ro_ont:Entity_objekt: Represents an object.
+- ro_ont:Entity_originalzitat: Represents an original quote.
+- ro_ont:Entity_ort: Represents a place.
+- ro_ont:Entity_person: Represents a person.
+- ro_ont:Entity_szene: Represents a scene.
+- ro_ont:description: Represents a description.
+- ro_ont:entity: Represents an entity.
+- ro_ont:thesaurus: Represents a thesaurus.
+- ro_ont:thesaurus_term: Represents a term in the thesaurus.
+- ro_ont:value: Represents a value.
+- ro_ont:work: Represents a work.
+- skos:Concept: Represents a SKOS concept.
+
+### Properties
+- ro_ont:anbringung
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Placement or attachment related to a work.
+- ro_ont:ante
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Ante related to a work.
+- ro_ont:archivnr
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Archive number associated with a work.
+- ro_ont:bildthema
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Theme of the image related to a work.
+- ro_ont:bundesland
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Federal state associated with a work.
+- ro_ont:comments
+  - Domain: ro_ont:value
+  - Range: rdf:List
+  - Description: Comments related to a value.
+- ro_ont:contains_entity
+  - Domain: ro_ont:description
+  - Range: ro_ont:entity
+  - Description: Indicates an entity contained in a description.
+- ro_ont:datierung
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Dating information related to a work.
+- ro_ont:dianr
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Dia number associated with a work.
+- ro_ont:ensemble
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Ensemble related to a work.
+- ro_ont:ensemblebezeichnung
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Designation of the ensemble related to a work.
+- ro_ont:ensemblenr
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Ensemble number associated with a work.
+- ro_ont:enstehungsort
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Place of origin related to a work.
+- ro_ont:fol
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Folio related to a work.
+- ro_ont:form
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Form associated with a work.
+- ro_ont:gebaeudekontext
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Building context related to a work.
+- ro_ont:has_description
+  - Domain: ro_ont:work
+  - Range: ro_ont:description
+  - Description: Description associated with a work.
+- ro_ont:has_thesaurus_entry
+  - Domain: ro_ont:value
+  - Range: ro_ont:thesaurus_entry
+  - Description: Thesaurus entry associated with a value.
+- ro_ont:index
+  - Domain: ro_ont:work
+  - Range:  xsd:positiveInteger
+  - Description: Index associated with a work.
+- ro_ont:institution
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Institution associated with a work.
+- ro_ont:invnr
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Inventory number associated with a work.
+- ro_ont:kuenstler
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Artist associated with a work.
+- ro_ont:links
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Links associated with a work.
+- ro_ont:literatur
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Literature associated with a work.
+- ro_ont:masze
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Measurements associated with a work.
+- ro_ont:material
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Material associated with a work.
+- ro_ont:motivtypus
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Type of motif associated with a work.
+- ro_ont:objektart
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Type of object related to a work.
+- ro_ont:post
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Post related to a work.
+- ro_ont:provenienz
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Provenance related to a work.
+- ro_ont:quelle
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Source associated with a work.
+- ro_ont:relation/handlung_objekt_bezug
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between action and object associated with an entity.
+- ro_ont:relation/handlung_person_bezug
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between action and person associated with an entity.
+- ro_ont:relation/kleidung_kleidung_child
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between clothing items in an entity.
+- ro_ont:relation/kleidung_kleidung_hat_bezug
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between clothing items with reference to an entity.
+- ro_ont:relation/kleidung_objekt_bezug
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between clothing and object associated with an entity.
+- ro_ont:relation/kleidung_objekt_hat_bezug
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between clothing and object with reference to an entity.
+- ro_ont:relation/kleidung_originalzitat_child
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between clothing and original quote associated with an entity.
+- ro_ont:relation/koerperteil_koerperteil_child
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between body parts in an entity.
+- ro_ont:relation/koerperteil_objekt_bezug
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between body part and object associated with an entity.
+- ro_ont:relation/koerperteil_objekt_child
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between body part and object child in an entity.
+- ro_ont:relation/koerperteil_originalzitat_child
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between body part and original quote child in an entity.
+- ro_ont:relation/objekt_objekt_bezug
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between objects associated with an entity.
+- ro_ont:relation/objekt_objekt_child
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between object and object child in an entity.
+- ro_ont:relation/objekt_objekt_hat_bezug
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between object and object with reference to an entity.
+- ro_ont:relation/objekt_originalzitat_child
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between object and original quote child in an entity.
+- ro_ont:relation/originalzitat_objekt_bezug
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between original quote and object associated with an entity.
+- ro_ont:relation/person_kleidung_child
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between person and clothing child in an entity.
+- ro_ont:relation/person_koerperteil_child
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between person and body part child in an entity.
+- ro_ont:relation/person_objekt_attribut
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between person and object attribute in an entity.
+- ro_ont:relation/person_objekt_bezug
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between person and object with reference to an entity.
+- ro_ont:relation/person_objekt_child
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between person and object child in an entity.
+- ro_ont:relation/person_objekt_hat_bezug
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between person and object with reference to an entity.
+- ro_ont:relation/person_person_bezug
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between persons associated with an entity.
+- ro_ont:relation/szene_handlung_child
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between scene and action child in an entity.
+- ro_ont:relation/szene_historort_child
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between scene and historical place child in an entity.
+- ro_ont:relation/szene_objekt_child
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between scene and object child in an entity.
+- ro_ont:relation/szene_originalzitat_child
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between scene and original quote child in an entity.
+- ro_ont:relation/szene_ort_child
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between scene and place child in an entity.
+- ro_ont:relation/szene_person_child
+  - Domain: ro_ont:entity
+  - Range: ro_ont:entity
+  - Description: Relation between scene and person child in an entity.
+- ro_ont:sakral_profan
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Sacred or secular classification related to a work.
+- ro_ont:staat
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: State associated with a work.
+- ro_ont:standort
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Location associated with a work.
+- ro_ont:technik
+  - Domain: ro_ont:work
+  - Range: xsd:string
+  - Description: Technique associated with a work.
+- ro_ont:thesaurus
+  - Domain: ro_ont:thesaurus_term
+  - Range: ro_ont:thesaurus_term
+  - Description: Thesaurus related to a thesaurus term.
