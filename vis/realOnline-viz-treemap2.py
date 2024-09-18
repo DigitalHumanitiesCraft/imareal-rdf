@@ -171,6 +171,10 @@ app.layout = html.Div([
      Input('switch-button', 'n_clicks')]
 )
 def update_figure(selected_objects, search_query, n_clicks):
+    # Ensure n_clicks is not None
+    if n_clicks is None:
+        n_clicks = 0
+
     # Determine which chart type to display
     chart_type = 'treemap' if n_clicks % 2 == 0 else 'sunburst'
     switch_button_text = 'Switch to Sunburst' if chart_type == 'treemap' else 'Switch to Treemap'
